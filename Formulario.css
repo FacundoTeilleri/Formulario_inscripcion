@@ -1,0 +1,472 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #142B3A;
+    --azul-claro: #087DB5;
+    --celeste: #20BCEB;
+    --amarillo: #FFD52E;
+    --texto: #263B49;
+    --texto-suave: #718391;
+    --borde: #D8E5ED;
+    --fondo-campo: #F8FBFD;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #142B3A;
+
+    background:
+        radial-gradient(
+            ellipse at 10% 5%,
+            rgba(32, 188, 235, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #F3FAFF,
+            #FFFFFF 55%,
+            #EAF6FF
+        );
+
+    min-height: 100vh;
+    padding: 30px 15px;
+    line-height: 1.5;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+
+#principal {
+    max-width: 950px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(20, 43, 58, 0.10),
+        0 2px 8px rgba(20, 43, 58, 0.04);
+
+    transition: box-shadow 0.3s ease;
+}
+
+#principal:hover {
+    box-shadow:
+        0 20px 55px rgba(20, 43, 58, 0.14),
+        0 0 0 1px rgba(32, 188, 235, 0.15);
+}
+
+/* ==============================
+   ENCABEZADO
+============================== */
+
+.encabezado {
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(32, 188, 235, 0.18),
+            transparent 38%
+        ),
+        linear-gradient(120deg, #142B3A, #1B4055);
+
+    color: white;
+    padding: 32px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    border-bottom: 4px solid var(--celeste);
+}
+
+.encabezado-texto {
+    flex: 1;
+}
+
+.etiqueta-institucion,
+.etiqueta-inscripcion {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.etiqueta-institucion {
+    color: var(--celeste);
+    margin-bottom: 9px;
+}
+
+.encabezado h1 {
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+}
+
+.encabezado-texto p {
+    color: #D5E5EF;
+    font-size: 14px;
+    max-width: 440px;
+    line-height: 1.7;
+}
+
+.encabezado img {
+    display: block;
+    width: 105px;
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    color: var(--amarillo)
+}
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+
+main {
+    padding: 38px 45px 35px;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.introduccion {
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 2px solid #88abc4;
+}
+
+.etiqueta-inscripcion {
+    color: var(--azul-claro);
+    margin-bottom: 8px;
+}
+
+main h2 {
+    color: var(--azul);
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 9px;
+}
+
+.introduccion p {
+    max-width: 620px;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   FORMULARIO Y CAMPOS
+============================== */
+
+form {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 17px;
+}
+
+.grupo-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--azul);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.obligatorio {
+    color: #D33D3D;
+}
+
+.opcional {
+    color: var(--texto-suave);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.registro,
+select {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+
+    background-color: var(--fondo-campo);
+    color: var(--azul);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.registro::placeholder {
+    color: #98A9B5;
+    font-weight: 400;
+}
+
+select {
+    cursor: pointer;
+}
+
+select:invalid {
+    color: #98A9B5;
+}
+
+.registro:hover,
+select:hover {
+    border-color: #A9C8D9;
+}
+
+.registro:focus,
+select:focus {
+    border-color: var(--celeste);
+    background-color: white;
+
+    box-shadow:
+        0 0 0 3px rgba(32, 188, 235, 0.15);
+}
+
+.campo small {
+    margin-top: 5px;
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+/* ==============================
+   AVISO
+============================== */
+
+.aviso {
+    margin: 3px 0 20px;
+    padding: 12px 14px;
+
+    border-left: 3px solid var(--celeste);
+    border-radius: 4px;
+
+    background: #F0F9FD;
+    color: #4B6575;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   BOTÓN DE ENVÍO
+============================== */
+
+.enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--amarillo);
+    color: var(--azul);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(244, 196, 0, 0.14);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.enviar span {
+    font-size: 19px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.enviar:hover {
+    background: #F4C400;
+    box-shadow: 0 6px 16px rgba(244, 196, 0, 0.24);
+    transform: translateY(-1px);
+}
+
+.enviar:hover span {
+    transform: translateX(4px);
+}
+
+.enviar:active {
+    transform: translateY(0);
+}
+
+.enviar:focus-visible,
+form a:focus-visible {
+    outline: 3px solid var(--celeste);
+    outline-offset: 4px;
+}
+
+/* ==============================
+   ENLACE PARA VOLVER
+============================== */
+
+form a.volver {
+    display: block;
+    width: fit-content;
+    margin: 17px auto 0;
+
+    color: var(--azul-claro);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+form a.volver:hover {
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+/* ==============================
+   PIE DE PÁGINA
+============================== */
+
+footer {
+    padding: 17px 20px;
+    background: #F7FAFC;
+    border-top: 1px solid #E8EFF4;
+    text-align: center;
+}
+
+footer p {
+    color: var(--texto-suave);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* ==============================
+   ADAPTACIÓN A CELULARES
+============================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    #principal {
+        border-radius: 13px;
+    }
+
+    .encabezado {
+        padding: 25px 20px;
+        gap: 14px;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+        letter-spacing: -0.5px;
+    }
+
+    .encabezado-texto p {
+        font-size: 12px;
+    }
+
+    .encabezado img {
+        width: 75px;
+        max-width: 25%;
+    }
+
+    .etiqueta-institucion,
+    .etiqueta-inscripcion {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+
+    main {
+        padding: 27px 20px;
+    }
+
+    main h2 {
+        font-size: 27px;
+    }
+
+    .introduccion {
+        margin-bottom: 23px;
+        padding-bottom: 18px;
+    }
+
+    .grupo-campos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .campo {
+        margin-bottom: 15px;
+    }
+
+    .registro,
+    select {
+        min-height: 45px;
+        font-size: 14px;
+    }
+
+    .enviar {
+        min-height: 48px;
+    }
+
+    footer {
+        padding: 15px 12px;
+    }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+
+.grupo-campos {
+    grid-template-columns: 1fr;
+    gap: 0;
+}

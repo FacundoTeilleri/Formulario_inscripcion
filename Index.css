@@ -1,0 +1,213 @@
+:root {
+    --azul: #142B3A;
+    --azul-claro: #087DB5;
+    --celeste: #20BCEB;
+    --amarillo: #FFD52E;
+    --texto: #263B49;
+    --texto-suave: #718391;
+    --borde: #D8E5ED;
+    --fondo-campo: #F8FBFD;
+}
+
+body {
+background:
+        radial-gradient(
+            ellipse at 10% 5%,
+            rgba(32, 188, 235, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #F3FAFF,
+            #FFFFFF 55%,
+            #EAF6FF
+        );
+       font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+
+.encabezado {
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(32, 188, 235, 0.18),
+            transparent 38%
+        ),
+        linear-gradient(120deg, #142B3A, #1B4055);
+
+    color: white;
+    padding: 32px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-radius: 18px;
+}
+
+.encabezado-texto {
+    flex: 1;
+}
+
+.etiqueta-institucion,
+.etiqueta-inscripcion {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.etiqueta-institucion {
+    color: var(--celeste);
+    margin-bottom: 9px;
+}
+
+.encabezado h1 {
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 10px;
+}
+
+.encabezado-texto p {
+    color: #D5E5EF;
+    font-size: 14px;
+    max-width: 440px;
+    line-height: 1.7;
+}
+
+.encabezado img {
+    display: block;
+    width: 105px;
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    color: var(--amarillo)
+}
+
+
+#Preguntas , #Formulario {
+     word-spacing: 2px;
+        font-size: larger;
+        line-height: 36px;
+        text-align: justify;
+}
+
+main {
+    padding: 20px; 
+    min-width: 750px;
+    margin: 0x 40px 40px 40px;
+
+}
+
+footer {
+   background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(32, 188, 235, 0.18),
+            transparent 38%
+        ),
+        linear-gradient(120deg, #142B3A, #1B4055);
+
+    background-image:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(32, 188, 235, 0.35) 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #142b3a 0%,
+            #1b4055 100%
+        );
+    background-repeat: no-repeat;
+}
+nav {
+    background: linear-gradient(120deg, #142b3a, #1b4055);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a:hover {
+    color: #20bceb;
+    background-color: rgba(32, 188, 235, 0.12);
+    border-radius: 6px;
+}
+nav ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+}
+
+button,
+.btn-inscribirse {
+    display: inline-block;
+    background: linear-gradient(120deg, #142b3a, #1b4055);
+    color: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 14px 32px;
+    border: 2px solid #20bceb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 8px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+}
+
+button:hover,
+.btn-inscribirse:hover {
+    background: linear-gradient(120deg, #20bceb, #168bb5);
+    color: #142b3a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(32, 188, 235, 0.3);
+}
+
+button:active,
+.btn-inscribirse:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+footer {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer a {
+    display: inline-block;
+    color: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px 15px;
+    padding: 10px 18px;
+    border: 1px solid rgba(32, 188, 235, 0.4);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #20bceb;
+    background-color: rgba(32, 188, 235, 0.12);
+    border-color: #20bceb;
+    transform: translateY(-3px);
+}

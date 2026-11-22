@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscripciones | CFP Nº 401 - Lanús</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <section id="principal">
+
+        <header class="encabezado">
+            <div class="encabezado-texto">
+                <span class="etiqueta-institucion">FORMACIÓN PROFESIONAL</span>
+                <h1>CFP Nº 401 - Lanús</h1>
+                <p>Aprendé, capacitáte y preparate para nuevas oportunidades.</p>
+            </div>
+
+            <img src="imagenes/logobien.png"
+                 alt="Logo del Centro de Formación Profesional Nº 401">
+        </header>
+
+        <main>
+            <div class="introduccion">
+                <span class="etiqueta-inscripcion">FORMULARIO DE INGRESO</span>
+                <h2>Inscripciones</h2>
+                <p>Completá tus datos para iniciar tu inscripción. Los campos marcados son obligatorios.</p>
+            </div>
+
+            <form action="Formulario.php" method="post">
+
+                <div class="campo">
+                    <label for="curso">Curso al que querés inscribirte <span class="obligatorio">*</span></label>
+                    <select id="curso" name="Curso" required>
+                        <option value="" disabled selected>Seleccioná un curso</option>
+                        <option value="ADMINISTRACIÓN">ADMINISTRACIÓN</option>
+                        <option value="ANIMACIÓN COMPUTARIZADA">ANIMACIÓN COMPUTARIZADA</option>
+                        <option value="AUX EN LIQUIDACIÓN DE IMPUESTOS">AUX EN LIQUIDACIÓN DE IMPUESTOS</option>
+                        <option value="AUX MECÁNICO AUTOMOTOR">AUX MECÁNICO AUTOMOTOR</option>
+                        <option value="AUX DE INSTALACIONES SANITARIAS Y DE GAS">AUX DE INSTALACIONES SANITARIAS Y DE GAS</option>
+                        <option value="BIJOUTERIE">BIJOUTERIE</option>
+                        <option value="BOLSILLERO">BOLSILLERO</option>
+                        <option value="CERRAJERÍA">CERRAJERÍA</option>
+                        <option value="COCINERO PARA COMEDOR ESCOLAR">COCINERO PARA COMEDOR ESCOLAR</option>
+                        <option value="COLOCADOR DE DURLOCK">COLOCADOR DE DURLOCK</option>
+                        <option value="CONFECCIÓN INDUMENTARIA">CONFECCIÓN INDUMENTARIA</option>
+                        <option value="CONFECCIONISTA DE BOLSOS Y MOCHILAS">CONFECCIONISTA DE BOLSOS Y MOCHILAS</option>
+                        <option value="CONFECCIONISTA DE ROPA DE BEBÉ">CONFECCIONISTA DE ROPA DE BEBÉ</option>
+                        <option value="CONSERVAS DE FRUTAS Y HORTALIZAS">CONSERVAS DE FRUTAS Y HORTALIZAS</option>
+                        <option value="DISEÑO DE PÁGINAS WEB">DISEÑO DE PÁGINAS WEB</option>
+                        <option value="DISEÑO GRÁFICO 1">DISEÑO GRÁFICO 1</option>
+                        <option value="DISEÑO GRÁFICO 2">DISEÑO GRÁFICO 2</option>
+                        <option value="DISEÑO PROYECTUAL">DISEÑO PROYECTUAL</option>
+                        <option value="DISEÑO Y FABRICACIÓN 3D">DISEÑO Y FABRICACIÓN 3D</option>
+                        <option value="ELECTRICIDAD DE AUTOMOTOR">ELECTRICIDAD DE AUTOMOTOR</option>
+                        <option value="ELECTRICISTA DE INMUEBLES">ELECTRICISTA DE INMUEBLES</option>
+                        <option value="ELECTRÓNICA AUDIO Y RADIO">ELECTRÓNICA AUDIO Y RADIO</option>
+                        <option value="ENERGÍA RENOVABLE">ENERGÍA RENOVABLE</option>
+                        <option value="GASISTA DOMICILIARIO">GASISTA DOMICILIARIO</option>
+                        <option value="LENCERÍA Y CORSETERÍA">LENCERÍA Y CORSETERÍA</option>
+                        <option value="MANTENIMIENTO DE EDIFICIOS">MANTENIMIENTO DE EDIFICIOS</option>
+                        <option value="MAESTRO PIZZERO Y ROTISERO">MAESTRO PIZZERO Y ROTISERO</option>
+                        <option value="MARKETING DE PRODUCTOS">MARKETING DE PRODUCTOS</option>
+                        <option value="MARKETING DE SERVICIOS">MARKETING DE SERVICIOS</option>
+                        <option value="MARKETING Y VENTA DIGITAL">MARKETING Y VENTA DIGITAL</option>
+                        <option value="MARROQUINERO">MARROQUINERO</option>
+                        <option value="MONTADOR SANITARISTA">MONTADOR SANITARISTA</option>
+                        <option value="OPERADOR DE INFORMÁTICA">OPERADOR DE INFORMÁTICA</option>
+                        <option value="PORTUGUÉS PARA HOTELERÍA Y GASTRONOMÍA 1">PORTUGUÉS PARA HOTELERÍA Y GASTRONOMÍA 1</option>
+                        <option value="PORTUGUÉS PARA HOTELERÍA Y GASTRONOMÍA 2">PORTUGUÉS PARA HOTELERÍA Y GASTRONOMÍA 2</option>
+                        <option value="PORTUGUÉS PARA NEGOCIOS 1">PORTUGUÉS PARA NEGOCIOS 1</option>
+                        <option value="PORTUGUÉS PARA NEGOCIOS 2">PORTUGUÉS PARA NEGOCIOS 2</option>
+                        <option value="PORTUGUÉS PARA TURISMO 1">PORTUGUÉS PARA TURISMO 1</option>
+                        <option value="PORTUGUÉS PARA TURISMO 2">PORTUGUÉS PARA TURISMO 2</option>
+                        <option value="PROGRAMACIÓN WEB">PROGRAMACIÓN WEB</option>
+                        <option value="RECURSOS HUMANOS">RECURSOS HUMANOS</option>
+                        <option value="RELACIONES PÚBLICAS">RELACIONES PÚBLICAS</option>
+                        <option value="REPARACIÓN DE PC">REPARACIÓN DE PC</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                        <input type="text" id="nombre" name="Nombre"
+                               class="registro" placeholder="Ej: Juan"
+                               autocomplete="given-name" required
+                               maxlength="15">
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido <span class="obligatorio">*</span></label>
+                        <input type="text" id="apellido" name="Apellido"
+                               class="registro" placeholder="Ej: Pérez"
+                               autocomplete="family-name" required
+                               maxlength="15">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="dni">DNI <span class="obligatorio">*</span></label>
+                    <input type="text" id="dni" name="Dni"
+                           class="registro" placeholder="Ej: 40123456"
+                           inputmode="numeric" pattern="[0-9]{7,8}"
+                           maxlength="8" autocomplete="off" required
+                           >
+                    <small>Ingresá tu DNI sin puntos.</small>
+                </div>
+
+                <div class="campo">
+                    <label for="domicilio">Domicilio <span class="obligatorio">*</span></label>
+                    <input type="text" id="domicilio" name="Domicilio"
+                           class="registro" placeholder="Calle, número y localidad"
+                           autocomplete="street-address" required
+                           maxlength="30">
+                </div>
+
+                <div class="grupo-campos">
+                    <div class="campo">
+                        <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
+                        <input type="tel" id="telefono" name="Telefono"
+                               class="registro" placeholder="Ej:+54 9 11 1234-5678"
+                               autocomplete="tel" required
+                               maxlength="14">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico <span class="opcional">(opcional)</span></label>
+                        <input type="email" id="email" name="Email"
+                               class="registro" placeholder="Ej: nombre@gmail.com"
+                               autocomplete="email"
+                               maxlength="30">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="plan">Plan social <span class="opcional">(opcional)</span></label>
+                    <input type="text" id="plan" name="Plan"
+                           class="registro" placeholder="Indicá el plan, si corresponde"
+                           maxlength="20">
+                </div>
+
+                <button type="submit" class="enviar">Enviar inscripción <span aria-hidden="true">→</span></button>
+
+                <a href="Index.html" class="volver">Volver al inicio</a>
+
+            </form>
+        </main>
+
+        <footer>
+            <p>CFP Nº 401 - Lanús</p>
+        </footer>
+
+    </section>
+</body>
+</html>
